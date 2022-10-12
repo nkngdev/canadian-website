@@ -1,5 +1,87 @@
 :root {
     --light: #FFFFFF;
     --dark: #191919;
-    --grey: #525252;
+    --grey: #424242;
+    --blue: #304A9A;
+    --blue-light: #EEF2FF;
+    --red: #E95559;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--dark);
+}
+
+h1 span {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--dark);
+    font-size: 64px;
+    line-height: 74px;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 74px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+p,
+span,
+li {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 16px;
+}
+
+p.l {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+p.m {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+p.s {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.red {
+    color: var(--red);
+}
+
+@media(max-width: 1024px) {
+    h1 {
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    p.l {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }

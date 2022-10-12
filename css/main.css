@@ -3,6 +3,134 @@
 @import url(variables.css);
 
 body {
-    /* Something */
     background: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+.container.row {
+    flex-direction: row;
+}
+
+.container.col {
+    flex-direction: column;
+}
+
+.container.fstart {
+    align-items: flex-start;
+}
+
+.container.center {
+    align-items: center;
+}
+
+.container.center.center {
+    justify-content: center;
+}
+
+.container.fillw {
+    width: 100%;
+}
+
+.container.fillh {
+    height: 100%;
+}
+
+.container.fillwh {
+    width: 100%;
+    height: 100%;
+}
+
+.container.hugw {
+    width: fit-content;
+}
+
+.container.hugh {
+    height: fit-content;
+}
+
+.container.hughwh {
+    width: fit-content;
+    height: fit-content;
+}
+
+.container.fullscreen {
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.container.p75 {
+    padding: 75px;
+}
+
+.container.g60 {
+    gap: 60px;
+}
+
+.container.g25 {
+    gap: 25px;
+}
+
+.mw500 {
+    max-width: 550px;
+}
+
+button {
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 10px;
+    background: var(--blue);
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--light);
+    border-radius: 6px;
+}
+
+button.sausage {
+    border-radius: 99px;
+}
+
+img {
+    object-fit: cover;
+}
+
+#main-screen>img {
+    width: 40vw;
+    height: fit-content;
+    content: url(/img/passport-img-big.png);
+}
+
+.container.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    height: 36px;
+    left: 75px;
+    right: 77px;
+    top: 75px;
+    padding-right: calc(40vw + 75px);
+}
+
+.container.navigation>img {
+    height: 36px;
+    content: url(/img/logo-red.svg);
 }
