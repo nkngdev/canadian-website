@@ -2,18 +2,23 @@
     --light: #FFFFFF;
     --dark: #191919;
     --grey: #424242;
+    --grey-light: #ebebeb;
     --blue: #304A9A;
     --blue-light: #EEF2FF;
     --red: #E95559;
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
     color: var(--dark);
+}
+
+#block-form h1,
+#block-form h1 span {
+    font-size: 55px;
 }
 
 h1 span {
@@ -33,6 +38,15 @@ h1 {
 h2 {
     font-size: 24px;
     line-height: 28px;
+}
+
+h3 {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #424242;
 }
 
 p,
@@ -67,6 +81,22 @@ p.s {
 
 .red {
     color: var(--red);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+.grey-light {
+    color: var(--grey-light);
+}
+
+div.blue-light {
+    background-color: var(--blue-light);
+}
+
+img {
+    object-fit: cover;
 }
 
 @media(max-width: 1024px) {

@@ -36,7 +36,8 @@ body {
     justify-content: center;
 }
 
-.container.fillw {
+.container.fillw,
+.fillw {
     width: 100%;
 }
 
@@ -76,8 +77,32 @@ body {
     gap: 60px;
 }
 
+.container.g100 {
+    gap: 100px;
+}
+
+.container.g75 {
+    gap: 75px;
+}
+
+.container.g30 {
+    gap: 30px;
+}
+
 .container.g25 {
     gap: 25px;
+}
+
+.container.g20 {
+    gap: 20px;
+}
+
+.container.g15 {
+    gap: 15px;
+}
+
+.container.g10 {
+    gap: 10px;
 }
 
 .mw500 {
@@ -89,6 +114,7 @@ button {
     border: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding: 20px 40px;
     gap: 10px;
@@ -133,4 +159,175 @@ img {
 .container.navigation>img {
     height: 36px;
     content: url(/img/logo-red.svg);
+}
+
+.card {
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    background: var(--blue-light);
+    border-radius: 12px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.container.for {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 15px 15px;
+    grid-template-areas:
+        ". . ."
+        ". . .";
+    width: 100%;
+    max-width: 1080px;
+    flex-wrap: wrap;
+}
+
+.container.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.steps .item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 100%;
+    min-height: 80px;
+}
+
+.steps .item img {
+    width: 64px;
+    height: 64px;
+}
+
+.item .container,
+.item .container *,
+.card.team .container * {
+    width: 100%;
+}
+
+.card.team {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 25px;
+    width: 100%;
+    max-width: 270px;
+    height: 350px;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.card.team img {
+    width: 230px;
+    height: 230px;
+    border-radius: 6px;
+}
+
+.card.package {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    width: 100%;
+    max-width: 320px;
+    height: fit-content;
+    background: var(--blue-light);
+    border-radius: 12px;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    width: 280px;
+    height: 0px;
+    border: 1px solid #C5D3FC;
+}
+
+.container.check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.container.check.positive img {
+    width: 18px;
+    height: 18px;
+    content: url(/img/icon-check.svg);
+}
+
+.container.check.negative img {
+    width: 18px;
+    height: 18px;
+    content: url(/img/icon-x.svg);
+}
+
+.card.contact {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    width: 450px;
+    height: auto;
+    background: var(--light);
+    border: 1px solid var(--grey-light);
+    border-radius: 12px;
+}
+
+input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    height: 56px;
+    border: 1px solid var(--grey-light);
+    border-radius: 6px;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grey);
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    width: 100%;
 }
