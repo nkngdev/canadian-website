@@ -91,6 +91,10 @@ p.s {
     color: var(--grey-light);
 }
 
+.light {
+    color: var(--light);
+}
+
 div.blue-light {
     background-color: var(--blue-light);
 }

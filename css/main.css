@@ -2,6 +2,10 @@
 @import url(mobile.css);
 @import url(variables.css);
 
+* {
+    transition: all ease-in-out .3s;
+}
+
 body {
     background: var(--light);
     display: flex;
@@ -58,6 +62,19 @@ body {
     height: fit-content;
 }
 
+.container .w50p {
+    width: 50%;
+}
+
+#contact-block0,
+#contact-block1 {
+    max-width: 640px;
+}
+
+#containerFaq {
+    max-width: 600px;
+}
+
 .container.hughwh {
     width: fit-content;
     height: fit-content;
@@ -105,6 +122,10 @@ body {
     gap: 10px;
 }
 
+.container.g5 {
+    gap: 5px;
+}
+
 .mw500 {
     max-width: 550px;
 }
@@ -138,7 +159,6 @@ img {
 
 #main-screen>img {
     width: 40vw;
-    height: fit-content;
     content: url(/img/passport-img-big.png);
 }
 
@@ -330,4 +350,143 @@ form {
     padding: 0px;
     gap: 15px;
     width: 100%;
+}
+
+.faqItem {
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    width: 100%;
+    height: fit-content;
+    border: 1px solid var(--grey-light);
+    border-radius: 12px;
+    background-color: var(--light);
+}
+
+.faqItem:hover {
+    border-color: var(--light);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+}
+
+.faqItem.active {
+    align-items: flex-start;
+}
+
+.faqItem p {
+    display: none;
+}
+
+.faqItem img {
+    width: 50px;
+    height: 50px;
+    content: url(/img/faq-arrow-right.svg);
+}
+
+.faqItem.active p {
+    display: block;
+}
+
+.faqItem.active img {
+    content: url(/img/faq-arrow-up.svg);
+}
+
+.artcon {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.article-card {
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    width: 350px;
+    height: 250px;
+    background: linear-gradient(0deg, rgba(25, 25, 25, 0.5), rgba(25, 25, 25, 0.5));
+    border-radius: 12px;
+}
+
+.article-card button {
+    margin-top: 10px;
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 5px;
+    position: absolute;
+    width: 105px;
+    height: 36px;
+    left: calc(50% - 105px/2);
+    top: calc(50% - 36px/2 - 25px);
+    background: var(--dark);
+    border-radius: 99px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--light);
+}
+
+.article-card:hover button {
+    margin: 0;
+    opacity: 1;
+}
+
+.article-card button:hover {
+    opacity: .7;
+}
+
+.article-card button img {
+    width: 14px;
+    height: 14px;
+    content: url(/img/icon-article.svg);
+}
+
+footer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    width: 100vw;
+    background: var(--dark);
+}
+
+footer img {
+    width: 39.4px;
+    height: 36px;
+}
+
+button.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 10px;
+    border-radius: 99px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    background: transparent;
 }
