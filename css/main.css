@@ -147,6 +147,7 @@ button {
     line-height: 19px;
     color: var(--light);
     border-radius: 6px;
+    cursor: pointer;
 }
 
 button.sausage {
@@ -282,7 +283,6 @@ hr {
     padding: 0;
     margin: 0;
     width: 100%;
-    width: 280px;
     height: 0px;
     border: 1px solid #C5D3FC;
 }
@@ -378,7 +378,8 @@ form {
 }
 
 .faqItem p {
-    display: none;
+    opacity: 0;
+    height: 0px;
 }
 
 .faqItem img {
@@ -388,11 +389,12 @@ form {
 }
 
 .faqItem.active p {
-    display: block;
+    opacity: 1;
+    height: fit-content;
 }
 
 .faqItem.active img {
-    content: url(/img/faq-arrow-up.svg);
+    transform: rotate(-90deg);
 }
 
 .artcon {
@@ -446,8 +448,9 @@ form {
     opacity: 1;
 }
 
-.article-card button:hover {
-    opacity: .7;
+.article-card button:hover,
+button.link:hover {
+    background-color: #323232;
 }
 
 .article-card button img {
@@ -489,4 +492,40 @@ button.link {
     align-items: center;
     color: var(--light);
     background: transparent;
+}
+
+button:hover {
+    background-color: var(--blue-lighter);
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    width: 500px;
+    height: 591px;
+    order: 0;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.checkout.c-contact {
+    width: 450px;
+    height: 591px;
+}
+
+button.liqpay {
+    background-color: #303030;
+}
+
+button.liqpay img {
+    content: url(/img/liqpay-logo-min.svg);
+    width: 19px;
+    height: 19px;
+}
+
+button.liqpay:hover {
+    background-color: #606060;
 }

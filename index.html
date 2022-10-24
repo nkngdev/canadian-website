@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/script/cookieconsent/cookieconsent.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" href="/script/hystmodal/hystmodal.min.css">
     <!-- fonts setup -->
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One:regular" rel="stylesheet" />
@@ -29,8 +30,8 @@
             <img src="" alt="">
         </div>
         <div class="container col center fillwh">
-            <div class="container col fstart fillwh g60 mw500">
-                <div class="container col fstart hughwh g25">
+            <div id="main-text-container" class="container col fstart fillwh g60 mw500">
+                <div id="main-text" class="container col fstart hughwh g25">
                     <h1 class="blue">
                         Безкоштовна<br>Канадська віза<br>
                         <span class="red">за 2 місяці.</span>
@@ -44,7 +45,7 @@
         </div>
         <img src="" alt="">
     </div>
-    <div class="container col center fullscreen p75 g75">
+    <div id="blockFor" class="container col center fullscreen p75 g75">
         <h1 class="blue">Кому підійде?</h1>
         <div class="container for">
             <div class="card">
@@ -57,45 +58,45 @@
                 </div>
             </div>
             <div class="card">
-                <img src="/img/icon-ukr-citizen.svg" alt="">
+                <img src="/img/icon-marry.svg" alt="">
                 <div class="container col g10 fillw">
-                    <h2 class="fillw blue">Громадянам</h2>
+                    <h2 class="fillw blue">Їх чоловікам та жінкам</h2>
                     <p class="fill grey">
                         ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                     </p>
                 </div>
             </div>
             <div class="card">
-                <img src="/img/icon-ukr-citizen.svg" alt="">
+                <img src="/img/icon-common-law.svg" alt="">
                 <div class="container col g10 fillw">
-                    <h2 class="fillw blue">Громадянам</h2>
+                    <h2 class="fillw blue">Common-law partners</h2>
                     <p class="fill grey">
                         ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                     </p>
                 </div>
             </div>
             <div class="card">
-                <img src="/img/icon-ukr-citizen.svg" alt="">
+                <img src="/img/icon-childs.svg" alt="">
                 <div class="container col g10 fillw">
-                    <h2 class="fillw blue">Громадянам</h2>
+                    <h2 class="fillw blue">Їх дітям на утриманні</h2>
                     <p class="fill grey">
                         ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                     </p>
                 </div>
             </div>
             <div class="card">
-                <img src="/img/icon-ukr-citizen.svg" alt="">
+                <img src="/img/icon-partner-childs.svg" alt="">
                 <div class="container col g10 fillw">
-                    <h2 class="fillw blue">Громадянам</h2>
+                    <h2 class="fillw blue">Дітям їх партнера</h2>
                     <p class="fill grey">
                         ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                     </p>
                 </div>
             </div>
             <div class="card">
-                <img src="/img/icon-ukr-citizen.svg" alt="">
+                <img src="/img/icon-childrens-child.svg" alt="">
                 <div class="container col g10 fillw">
-                    <h2 class="fillw blue">Громадянам</h2>
+                    <h2 class="fillw blue">Дітям дітей</h2>
                     <p class="fill grey">
                         ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                     </p>
@@ -103,7 +104,7 @@
             </div>
         </div>
     </div>
-    <div class="container col center fullscreen p75 g75">
+    <div id="blockHowWe" class="container col center fullscreen p75 g75">
         <h1 class="blue">Як ми працюємо</h1>
         <div class="container steps">
             <div class="item" id="item0">
@@ -148,9 +149,9 @@
             </div>
         </div>
     </div>
-    <div class="container col center p75 g75 blue-light fillw">
+    <div id="blockTeam" class="container col center p75 g75 blue-light fillw">
         <h1 class="blue">Our team</h1>
-        <div class="container row g20 fillw center">
+        <div id="containerTeam" class="container row g20 fillw center">
             <div class="card team">
                 <img src="/img/rando-guy.jpg" alt="">
                 <div class="container g10 col fillw">
@@ -174,9 +175,9 @@
             </div>
         </div>
     </div>
-    <div class="container col center fullscreen p75 g75">
+    <div id="blockPrices" class="container col center fullscreen p75 g75">
         <h1 class="blue">Ціни</h1>
-        <div class="container row g20 center fillw">
+        <div id="containerPackages" class="container row g20 center fillw">
             <div class="card package">
                 <div class="container col g10 fillw">
                     <h2 class="blue">Pack #1</h2>
@@ -294,10 +295,10 @@
             </div>
         </div>
     </div>
-    <div class="container col center fullscreen p75 g75">
+    <div id="blockFaq" class="container col center fullscreen p75 g75">
         <h1 class="blue">Часті питання</h1>
         <div class="container col g15 fillw" id="containerFaq">
-            <div class="faqItem" id="faqItem0">
+            <div class="faqItem active" id="faq0">
                 <div class="container col fillw g10">
                     <h2 class="blue fillw">Question Numba One</h2>
                     <p class="grey fillw">
@@ -306,7 +307,7 @@
                 </div>
                 <img src="" alt="">
             </div>
-            <div class="faqItem" id="faqItem1">
+            <div class="faqItem" id="faq1">
                 <div class="container col fillw g10">
                     <h2 class="blue fillw">Question Numba One</h2>
                     <p class="grey fillw">
@@ -315,7 +316,7 @@
                 </div>
                 <img src="" alt="">
             </div>
-            <div class="faqItem" id="faqItem2">
+            <div class="faqItem" id="faq2">
                 <div class="container col fillw g10">
                     <h2 class="blue fillw">Question Numba One</h2>
                     <p class="grey fillw">
@@ -324,7 +325,7 @@
                 </div>
                 <img src="" alt="">
             </div>
-            <div class="faqItem" id="faqItem3">
+            <div class="faqItem" id="faq3">
                 <div class="container col fillw g10">
                     <h2 class="blue fillw">Question Numba One</h2>
                     <p class="grey fillw">
@@ -333,10 +334,13 @@
                 </div>
                 <img src="" alt="">
             </div>
-            <div class="faqItem" id="faqItem4">
+            <div class="faqItem" id="faq4">
                 <div class="container col fillw g10">
                     <h2 class="blue fillw">Question Numba One</h2>
                     <p class="grey fillw">
+                        Ми звʼяжемось з вами якнайшвидше!
+                        Ми звʼяжемось з вами якнайшвидше!
+                        Ми звʼяжемось з вами якнайшвидше!
                         Ми звʼяжемось з вами якнайшвидше!
                     </p>
                 </div>
@@ -344,9 +348,9 @@
             </div>
         </div>
     </div>
-    <div class="container col center fillw p75 g75">
+    <div id="blockArticle" class="container col center fillw p75 g75">
         <h1 class="blue">Статті на тему</h1>
-        <div class="container row g25 artcon" id="articles-container0">
+        <div class="artcon container row g25" id="articles-container0">
             <div class="article-card" data-image="/img/" id="article0">
                 <button>
                     <img src="" alt="">

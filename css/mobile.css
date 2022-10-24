@@ -1,3 +1,80 @@
 @media(max-width: 1024px) {
-    /* Something */
+
+
+    #block-form,
+    .container.for,
+    #articles-container0,
+    footer,
+    #containerPackages,
+    #containerTeam {
+        flex-direction: column;
+    }
+
+    #main-screen {
+        flex-direction: column-reverse;
+        gap: 36px;
+    }
+
+    #blockFor,
+    #blockHowWe,
+    #blockTeam,
+    #blockPrices,
+    #block-form,
+    #blockFaq,
+    #blockArticle,
+    #main-screen,
+    footer {
+        padding: 36px 18px;
+        gap: 36px;
+    }
+
+    .container.for {
+        display: flex;
+    }
+
+    #main-screen>img {
+        width: 80%;
+        content: url(/img/passport-img-small.png);
+        order: 0;
+    }
+
+    #main-text {
+        gap: 10px;
+    }
+
+    #main-text-container,
+    #block-form {
+        gap: 24px;
+    }
+
+    #main-text,
+    #main-text-container {
+        text-align: center;
+        align-items: center;
+    }
+
+    .article-card,
+    .card.contact {
+        width: 100%;
+    }
+
+    .card.contact {
+        box-sizing: border-box;
+    }
+
+    .container.navigation {
+        position: absolute;
+        height: 58px;
+        left: 18px;
+        right: 18px;
+        top: 18px;
+    }
+
+    .card {
+        max-width: unset;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
