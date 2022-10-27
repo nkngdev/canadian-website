@@ -22,16 +22,16 @@
 </head>
 
 <body class="blue-light">
-    <div class="container row g20 fullscreen center">
+    <div id="checkout-container" class="container row g20 fullscreen center">
         <div class="checkout">
             <h2 class="dark">Ви обрали</h2>
             <hr>
             <div class="container col g10 fillw">
-                <h2 class="blue">Pack #1</h2>
-                <p class="grey">
+                <h2 id="checkout-package-name" class="blue">Pack #1</h2>
+                <p id="checkout-package-desc" class="grey">
                     ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                 </p>
-                <p class="blue">Змінити пакет</p>
+                <a href="/" class="blue">Змінити пакет</a>
             </div>
             <hr>
             <div class="container col g15 fillw">
@@ -59,22 +59,24 @@
             <hr>
             <div class="container check">
                 <h3>До сплати</h3>
-                <h3>500 ₴</h3>
+                <h3 id="checkout-package-price">500 ₴</h3>
             </div>
             <p class="grey">
                 ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
             </p>
         </div>
         <div class="checkout c-contact">
-            <h2 class="dark">Ви обрали</h2>
+            <h2 class="dark">Заповніть форму</h2>
             <hr>
             <form id="formContactCheckout">
-                <input type="text" name="username" id="">
-                <input type="text" name="username" id="">
+                <input type="text" name="username" id="" placeholder="Ваше імʼя">
+                <input type="phone" name="user_phone" id="" placeholder="Номер телефону">
             </form>
             <div class="container col g15 fillw">
                 <p class="blue">Оберіть кількість людей, на яких заповнюється заявка</p>
-                <input type="text" name="username" id="">
+                <select name="people-count" aria-placeholder="Кількість людей" id="">
+                    <option value="5-ppl" selected>5 людей</option>
+                </select>
             </div>
             <p class="fill grey">
                 ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
@@ -88,5 +90,7 @@
     </div>
 
 </body>
+
+<script src="/script/checkout.js"></script>
 
 </html>

@@ -21,6 +21,8 @@ const faq17 = $('#faq17');
 const faq18 = $('#faq18');
 const faq19 = $('#faq19');
 
+const btnFillForm0 = $('#btn_fillForm0');
+
 faq0.click(() => faqExpand(faq0));
 faq1.click(() => faqExpand(faq1));
 faq2.click(() => faqExpand(faq2));
@@ -36,7 +38,23 @@ faq11.click(() => faqExpand(faq11));
 faq12.click(() => faqExpand(faq12));
 faq13.click(() => faqExpand(faq13));
 
+$('#btn-package0').click(() => openLink('0'));
+$('#btn-package1').click(() => openLink('1'));
+$('#btn-package2').click(() => openLink('2'));
+
+btnFillForm0.click(() => scrollTo('#block-form'));
+
 function faqExpand(faqElement) {
     $('#containerFaq').find('.faqItem.active').toggleClass('active');
     faqElement.toggleClass('active');
+}
+
+function scrollTo(element) {
+    $('html,body').animate({
+        scrollTop: $(element).offset().top
+    });
+}
+
+function openLink(package) {
+    window.open('/checkout.html?package=' + package);
 }

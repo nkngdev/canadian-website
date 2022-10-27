@@ -77,4 +77,21 @@
     button {
         font-size: 14px;
     }
+
+    #checkout-container {
+        padding: 18px 36px;
+        flex-direction: column;
+    }
+
+    #checkout-container>div {
+        width: 100%;
+    }
+
+    body.e404 {
+        padding: 0 18px;
+    }
+
+    body.e404 img {
+        width: 100%;
+    }
 }
