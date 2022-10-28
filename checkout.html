@@ -18,6 +18,9 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="/script/hystmodal/hystmodal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="/script/translit.js"></script>
     <title>Cuaet</title>
 </head>
 
@@ -31,7 +34,7 @@
                 <p id="checkout-package-desc" class="grey">
                     ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
                 </p>
-                <a href="/" class="blue">Змінити пакет</a>
+                <a href="/#blockPrices" class="blue">Змінити пакет</a>
             </div>
             <hr>
             <div class="container col g15 fillw">
@@ -68,24 +71,31 @@
         <div class="checkout c-contact">
             <h2 class="dark">Заповніть форму</h2>
             <hr>
-            <form id="formContactCheckout">
-                <input type="text" name="username" id="" placeholder="Ваше імʼя">
-                <input type="phone" name="user_phone" id="" placeholder="Номер телефону">
+            <form name="paymentForm0" id="formContactCheckout" method="POST"
+                action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
+                <input id="paymentData" type="hidden" name="data" value="" />
+                <input id="paymentSign" type="hidden" name="signature" value="" />
+                <div class="container col g15 fillw">
+                    <input type="text" name="fname" id="" placeholder="Ваше імʼя" />
+                    <input type="tel" name="tel" id="" placeholder="Номер телефону" />
+                </div>
+                <div class="container col g15 fillw">
+                    <p class="blue">Оберіть кількість людей, на яких заповнюється заявка</p>
+                    <select name="count" aria-placeholder="Кількість людей" id="">
+                        <option value="5" selected>5 людей</option>
+                    </select>
+                </div>
             </form>
-            <div class="container col g15 fillw">
-                <p class="blue">Оберіть кількість людей, на яких заповнюється заявка</p>
-                <select name="people-count" aria-placeholder="Кількість людей" id="">
-                    <option value="5-ppl" selected>5 людей</option>
-                </select>
-            </div>
             <p class="fill grey">
                 ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
             </p>
             <div class="container fillw g15 col">
                 <button class="fillw">Залишити заявку на консльтацію</button>
-                <button class="fillw liqpay">Оплатити карткою у Liqpay <img src="" alt="liqpay-logo"></button>
+                <button id="btnPay" type="submit" class="fillw liqpay">
+                    Оплатити карткою у Liqpay
+                    <img src="" alt="liqpay-logo">
+                </button>
             </div>
-
         </div>
     </div>
 

@@ -56,5 +56,5 @@ function scrollTo(element) {
 }
 
 function openLink(package) {
-    window.open('/checkout.html?package=' + package);
+    location.replace('/checkout.html?package=' + package);
 }
