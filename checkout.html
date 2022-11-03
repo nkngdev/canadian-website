@@ -21,10 +21,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script src="/script/translit.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
     <title>Cuaet</title>
 </head>
 
 <body class="blue-light">
+    <button class="back"><img src="" alt="">На головну</button>
     <div id="checkout-container" class="container row g20 fullscreen center">
         <div class="checkout">
             <h2 class="dark">Ви обрали</h2>
@@ -38,24 +41,32 @@
             </div>
             <hr>
             <div class="container col g15 fillw">
-                <div class="container check positive">
-                    <p class="grey">Thing</p>
+                <div id="check0" class="container check">
+                    <p class="grey">Реєстрація і подача документів</p>
                     <img src="" alt="">
                 </div>
-                <div class="container check positive">
-                    <p class="grey">Thing</p>
+                <div id="check1" class="container check positive">
+                    <p class="grey">Кількість осіб</p>
+                    <p id="peopleCount" class="blue">ile</p>
+                </div>
+                <div id="check2" class="container check">
+                    <p class="grey">Повний супровід</p>
                     <img src="" alt="">
                 </div>
-                <div class="container check negative">
-                    <p class="grey">Thing</p>
+                <div id="check3" class="container check">
+                    <p class="grey">Запис на біометрію</p>
                     <img src="" alt="">
                 </div>
-                <div class="container check negative">
-                    <p class="grey">Thing</p>
+                <div id="check4" class="container check">
+                    <p class="grey">Інструкція по відправці паспорту</p>
                     <img src="" alt="">
                 </div>
-                <div class="container check negative">
-                    <p class="grey">Thing</p>
+                <div id="check5" class="container check">
+                    <p class="grey">Запис на passport submission</p>
+                    <img src="" alt="">
+                </div>
+                <div id="check6" class="container check">
+                    <p class="grey">Інструкція по отриманню паспорту</p>
                     <img src="" alt="">
                 </div>
             </div>
@@ -71,6 +82,9 @@
         <div class="checkout c-contact">
             <h2 class="dark">Заповніть форму</h2>
             <hr>
+            <p class="fill grey">
+                Для оплати або консультації, будьласка заповніть форму нижче.
+            </p>
             <form name="paymentForm0" id="formContactCheckout" method="POST"
                 action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
                 <input id="paymentData" type="hidden" name="data" value="" />
@@ -79,18 +93,14 @@
                     <input type="text" name="fname" id="" placeholder="Ваше імʼя" />
                     <input type="tel" name="tel" id="" placeholder="Номер телефону" />
                 </div>
-                <div class="container col g15 fillw">
-                    <p class="blue">Оберіть кількість людей, на яких заповнюється заявка</p>
-                    <select name="count" aria-placeholder="Кількість людей" id="">
-                        <option value="5" selected>5 людей</option>
-                    </select>
-                </div>
             </form>
             <p class="fill grey">
-                ​Это основные цвета, которые были в средневековье. На фото палитра в виде разных тканей
+                Натискаючи кнопку "Залишити заявку на консульацію" ви погоджуєтесь з <a href="#">політикою
+                    конфіденційності і
+                    обробки даних.</a>
             </p>
             <div class="container fillw g15 col">
-                <button class="fillw">Залишити заявку на консльтацію</button>
+                <button id="btnConsult" type="submit" class="fillw">Залишити заявку на консльтацію</button>
                 <button id="btnPay" type="submit" class="fillw liqpay">
                     Оплатити карткою у Liqpay
                     <img src="" alt="liqpay-logo">

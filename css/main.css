@@ -306,7 +306,7 @@ hr {
     content: url(/img/icon-check.svg);
 }
 
-.container.check.negative img {
+.container.check img {
     width: 18px;
     height: 18px;
     content: url(/img/icon-x.svg);
@@ -344,7 +344,6 @@ select {
     font-size: 14px;
     line-height: 16px;
     color: var(--grey);
-
 }
 
 form {
@@ -509,7 +508,7 @@ button:hover {
     padding: 20px;
     gap: 30px;
     width: 500px;
-    height: 591px;
+    height: 620px;
     order: 0;
     background: var(--light);
     border-radius: 12px;
@@ -517,7 +516,6 @@ button:hover {
 
 .checkout.c-contact {
     width: 450px;
-    height: 591px;
 }
 
 button.liqpay {
@@ -603,6 +601,98 @@ div.anim-404 {
         color var(--d) var(--e) infinite,
         position var(--d) var(--e) infinite;
     transition: all .2s ease-in-out;
+}
+
+#wps-container img {
+    height: 20px;
+    width: auto;
+}
+
+button.back {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    position: fixed;
+    height: 38px;
+    left: 50px;
+    top: 50px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: var(--grey);
+}
+
+button.back img {
+    width: 18px;
+    height: 18px;
+    content: url(/img/arrow-left.svg);
+}
+
+button.back:hover {
+    opacity: .6;
+}
+
+.privacy-modal {
+    top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: relative;
+    width: 60%;
+    max-width: 900px;
+    height: auto;
+    background: var(--light);
+    border-radius: 12px;
+    margin-bottom: 50px;
+    transition: none;
+}
+
+.privacy-modal>.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 15px;
+    gap: 36px;
+    width: 100%;
+}
+
+.privacy-modal>.text {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+    width: 100%;
+}
+
+.privacy-modal p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+button.modal.close {
+    padding: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 75px;
+    top: 65px;
+    background: #373737;
+    border-radius: 8px;
+}
+
+button.modal>img {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: calc(50% - 18px/2);
+    top: calc(50% - 18px/2);
 }
 
 @keyframes color {

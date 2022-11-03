@@ -41,15 +41,30 @@ faq13.click(() => faqExpand(faq13));
 $('#btn-package0').click(() => openLink('0'));
 $('#btn-package1').click(() => openLink('1'));
 $('#btn-package2').click(() => openLink('2'));
+$('#btn-package3').click(() => openLink('3'));
+$('#btn-privacy').click(() => openModal('#privacyModal'));
+$('#btn-paymentTerms').click(() => openModal('#paymentTermsModal'));
 
-btnFillForm0.click(() => scrollTo('#block-form'));
+const modal = new HystModal({
+    linkAttributeName: "data-hystmodal ",
+});
+
+function openModal(selector) {
+    modal.open(selector);
+}
+
+btnFillForm0.click(() => scrollToo('#block-form'));
+
+function sendForm(data) {
+    emailjs.send("service_kn4l7an", "template_dof30qf", data, '5IctXrepJrPKzs2mb');
+}
 
 function faqExpand(faqElement) {
     $('#containerFaq').find('.faqItem.active').toggleClass('active');
     faqElement.toggleClass('active');
 }
 
-function scrollTo(element) {
+function scrollToo(element) {
     $('html,body').animate({
         scrollTop: $(element).offset().top
     });
@@ -57,4 +72,46 @@ function scrollTo(element) {
 
 function openLink(package) {
     location.replace('/checkout.html?package=' + package);
+}
+
+$.validator.methods.UAphone = function (value, element) {
+    return this.optional(element) || /^((?:\+?3)?8)?[\s\-\(]*?(0\d{2})[\s\-\)]*?(\d{3})[\s\-]*?(\d{2})[\s\-]*?(\d{2})$/gm.test(value);
+}
+
+$(function () {
+    $("form[name='contactMain']").validate({
+        rules: {
+            fname: "required",
+            tel: {
+                required: true,
+                UAphone: true
+            }
+        },
+        // Specify validation error messages
+        messages: {
+            fname: "Введіть ваше імʼя",
+            tel: "Введіть телефон в форматі +380ХХ-ХХХ-ХХ-ХХ"
+        },
+        submitHandler: function (form) {
+            const result = $("form[name='contactMain']").serializeArray();
+            var templateParams = {
+                fname: result[0].value,
+                tel: result[1].value,
+                source: 'mainpage'
+            };
+            console.log(templateParams);
+            sendForm(templateParams);
+            setTimeout(function () {
+                form.submit();
+            }, 500);
+        }
+    });
+});
+
+try {
+    var browserData = window.location.href.split("?")[1].split("=")[1];
+    alert('Форма відправлена, ми скоро з вами звʼяжемось.');
+    location.assign('/');
+} catch (error) {
+    // Do nothing
 }
