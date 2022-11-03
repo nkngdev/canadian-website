@@ -71,7 +71,7 @@ function scrollToo(element) {
 }
 
 function openLink(package) {
-    location.replace('/checkout.html?package=' + package);
+    location.replace('/checkout?package=' + package);
 }
 
 $.validator.methods.UAphone = function (value, element) {
